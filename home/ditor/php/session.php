@@ -1,0 +1,12 @@
+<?php
+ob_start();
+session_start();
+include("conn.php");
+if(!(isset($_SESSION['log_user'])))
+			{
+				header("location:writercheck.php");
+			}
+			else
+			{	
+$user_name=$_SESSION['log_user'];
+?>
